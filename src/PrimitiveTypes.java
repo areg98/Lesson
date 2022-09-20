@@ -1,5 +1,5 @@
 public class PrimitiveTypes {
-    public static void primitiveTypes(){
+    public static void main(String[] args) {
         //primitive types
 
         byte b1 = 2;
