@@ -19,7 +19,7 @@ public class IfElse {
 
         int a1 = 3;
         int b1 = 4;
-        int c1 = 3;
+        int c1 = 2;
         if (a1 + b1 > c1 && a1 + c1 > b1 && c1 + b1 > a1)
             System.out.println("With " + a1 + ", " + b1 + ", " + c1 + " is possible to make a triangle");
         else
@@ -33,10 +33,8 @@ public class IfElse {
         if (b1 > slingshot)
             slingshot = b1;
             page1 = a1;
-            page2 = c1;
         if (c1 > slingshot)
             slingshot = c1;
-            page1 = a1;
             page2 = b1;
        if (page1 * page1 + page2 * page2 == slingshot * slingshot)
            System.out.println("The triangle is a right triangle");
