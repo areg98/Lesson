@@ -32,9 +32,9 @@ public class Objects {
 
     //Method getting char array and return upper case letters
 
-    static char[] toUpperCase(char[] arr){
+    static char[] toUpperCase(char[] arr, int interval){
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = (char) ((int)arr[i] - 32);
+            arr[i] = (char) ((int)arr[i] - interval);
         }
         return arr;
     }
@@ -46,12 +46,14 @@ public class Objects {
         System.out.println(max(x, y));
         System.out.println(checkBoolean(true, 6.2));
         System.out.println(isFirstMax(x, y));
-        for (int i = 0; i < getLetter(97, 122).length; i++) {
-            System.out.print(getLetter(97, 122)[i] + " ");
+        char[] alphabet = getLetter(97, 122);
+        for (int i = 0; i < alphabet.length; i++) {
+            System.out.print(alphabet[i] + " ");
         }
         System.out.println();
-        for (int i = 0; i < getLetter(97, 122).length; i++) {
-            System.out.print(toUpperCase(getLetter(97, 122))[i] + " ");
+        char [] alphabetUpperCase = toUpperCase(alphabet, 32);
+        for (int i = 0; i <alphabet.length; i++) {
+            System.out.print(alphabetUpperCase[i] + " ");
         }
 
 
