@@ -52,7 +52,7 @@ public class Objects {
         }
         System.out.println();
         char [] alphabetUpperCase = toUpperCase(alphabet, 32);
-        for (int i = 0; i <alphabet.length; i++) {
+        for (int i = 0; i <alphabetUpperCase.length; i++) {
             System.out.print(alphabetUpperCase[i] + " ");
         }
 
