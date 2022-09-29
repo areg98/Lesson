@@ -16,6 +16,8 @@ public class Objects {
         return a >= b;
     }
 
+    //Getting letters via ascii code
+
     static char[] getLetter(int from, int to) {
         int lettersCount = (to - from) + 1;
         char[] letters = new char[lettersCount];
@@ -27,6 +29,8 @@ public class Objects {
         }
         return letters;
     }
+
+    //Method getting char array and return upper case letters
 
     static char[] toUpperCase(char[] arr){
         for (int i = 0; i < arr.length; i++) {
