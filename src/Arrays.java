@@ -58,18 +58,22 @@ public class Arrays {
         }
 
         for (int i = 0; i < h; i++) {
-            for (int j = 0; j < l; j++) {
-                if (i == j) sum += nums[i][j];
-            }
-            for (int j = l - 1; j >= 0; j--) {
-                if (h % 2 == 1 && l % 2 == 1 && i == j) {
-                    continue;
-                }
-                if (i + j == h - 1) {
-                    sum += nums[i][j];
-                }
-            }
+            sum += nums[i][i];
         }
+
+//        for (int i = 0; i < h; i++) {
+//            for (int j = 0; j < l; j++) {
+//                if (i == j) sum += nums[i][j];
+//            }
+//            for (int j = l - 1; j >= 0; j--) {
+//                if (h % 2 == 1 && l % 2 == 1 && i == j) {
+//                    continue;
+//                }
+//                if (i + j == h - 1) {
+//                    sum += nums[i][j];
+//                }
+//            }
+//        }
 
         System.out.println("Sum of diagonal lines: " + sum + "\n");
         //Sorting matrix: ascending, descending
