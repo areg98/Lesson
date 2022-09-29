@@ -18,44 +18,44 @@ public class Objects {
 
     //Getting letters via ascii code
 
-    static char[] getLetter(int from, int to) {
-        int lettersCount = (to - from) + 1;
-        char[] letters = new char[lettersCount];
-        int index = 0;
+    static char[] getLetter() {
 
-        for (int i = from; i <= to; i++) {
-            letters[index] = (char) i;
-            index++;
+        char[] letters = new char[26];
+        char letter = 'a';
+
+        for (int i = 0; i < 26; i++) {
+            letters[i] = letter;
+            letter++;
         }
         return letters;
     }
 
     //Method getting char array and return upper case letters
 
-    static char[] toUpperCase(char[] arr, int interval){
+    static char[] toUpperCase(char[] arr){
+        char letter = 'A';
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = (char) ((int)arr[i] - interval);
+            arr[i] = letter;
+            letter++;
         }
         return arr;
     }
-
-
-
 
     public static void main(String[] args) {
         System.out.println(max(x, y));
         System.out.println(checkBoolean(true, 6.2));
         System.out.println(isFirstMax(x, y));
-        char[] alphabet = getLetter(97, 122);
+
+        char[] alphabet = getLetter();
         for (int i = 0; i < alphabet.length; i++) {
             System.out.print(alphabet[i] + " ");
         }
+
         System.out.println();
-        char [] alphabetUpperCase = toUpperCase(alphabet, 32);
+
+        char [] alphabetUpperCase = toUpperCase(alphabet);
         for (int i = 0; i <alphabetUpperCase.length; i++) {
             System.out.print(alphabetUpperCase[i] + " ");
         }
-
-
     }
 }
