@@ -18,14 +18,31 @@ public class Objects {
 
     //Getting letters via ascii code
 
-    static char[] getLetter() {
-
-        char[] letters = new char[26];
-        char letter = 'a';
-
-        for (int i = 0; i < 26; i++) {
-            letters[i] = letter;
-            letter++;
+    static char[] getLetter(String lang) {
+        int length;
+        char firstLetter;
+        switch (lang){
+            case "en":
+                length = 26;
+                firstLetter = 'a';
+                break;
+            case "ru":
+                length = 32;
+                firstLetter = 'а';
+                break;
+            case "am":
+                length = 39;
+                firstLetter = 'ա';
+                break;
+            default:
+                System.out.println("Wrong language");
+                length = 0;
+                firstLetter = 0;
+        }
+        char[] letters = new char[length];
+        for (int i = 0; i < length; i++) {
+            letters[i] = firstLetter;
+            firstLetter++;
         }
         return letters;
     }
@@ -33,10 +50,30 @@ public class Objects {
     //Method getting char array and return upper case letters
 
     static char[] toUpperCase(char[] arr){
-        char letter = 'A';
+        String lang;
+        if ((int)arr[0] == 97) lang = "en";
+        else if ((int)arr[0] == 1072) lang = "ru";
+        else if ((int)arr[0] == 1377) lang = "am";
+        else lang = "";
+        char firstLetter;
+        switch (lang){
+            case "en":
+                firstLetter = 'A';
+                break;
+            case "ru":
+                firstLetter = 'А';
+                break;
+            case "am":
+                firstLetter = 'Ա';
+                break;
+            default:
+                System.out.println("Wrong language");
+                return arr;
+        }
+
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = letter;
-            letter++;
+            arr[i] = firstLetter;
+            firstLetter++;
         }
         return arr;
     }
@@ -46,16 +83,18 @@ public class Objects {
         System.out.println(checkBoolean(true, 6.2));
         System.out.println(isFirstMax(x, y));
 
-        char[] alphabet = getLetter();
+        char[] alphabet = getLetter("en");
+
         for (int i = 0; i < alphabet.length; i++) {
             System.out.print(alphabet[i] + " ");
         }
-
         System.out.println();
 
         char [] alphabetUpperCase = toUpperCase(alphabet);
+
         for (int i = 0; i <alphabetUpperCase.length; i++) {
             System.out.print(alphabetUpperCase[i] + " ");
         }
+
     }
 }
