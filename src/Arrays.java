@@ -47,7 +47,7 @@ public class Arrays {
         System.out.println("\n");
 
         // Calculating sum of diagonal lines for matrix
-        int h = 5, l = 5, sum = 0;
+        int h = 3, l = 3, sum = 0;
         int nums[][] = new int[h][l];
         for (int i = 0; i < h; i++) {
             for (int j = 0; j < l; j++) {
@@ -56,25 +56,16 @@ public class Arrays {
             }
             System.out.println();
         }
-
         for (int i = 0; i < h; i++) {
-            sum += nums[i][i];
+            if (h % 2 == 1 && i == h/2){
+                sum += nums[i][i];
+            }
+            else {
+                sum += nums[i][i] + nums[i][l-i-1];
+            }
         }
 
-//        for (int i = 0; i < h; i++) {
-//            for (int j = 0; j < l; j++) {
-//                if (i == j) sum += nums[i][j];
-//            }
-//            for (int j = l - 1; j >= 0; j--) {
-//                if (h % 2 == 1 && l % 2 == 1 && i == j) {
-//                    continue;
-//                }
-//                if (i + j == h - 1) {
-//                    sum += nums[i][j];
-//                }
-//            }
-//        }
-
+        System.out.println();
         System.out.println("Sum of diagonal lines: " + sum + "\n");
         //Sorting matrix: ascending, descending
 
