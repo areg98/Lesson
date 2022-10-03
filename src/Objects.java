@@ -13,7 +13,7 @@ public class Objects {
     }
 
     static boolean isFirstMax(int a, int b) {
-        return a >= b;
+        return a > b;
     }
 
     //Getting letters via ascii code
