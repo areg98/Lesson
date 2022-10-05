@@ -1,5 +1,9 @@
 public class GeometricImages {
-    public static void main(String[] args) {
+
+    static void printCube(int n ){
+
+        if (n == 0) return;
+
         for (int i = 1; i <= 5; i++) {
             int space;
             space = 5 - i;
@@ -39,9 +43,15 @@ public class GeometricImages {
 
             System.out.println();
         }
+        System.out.println("\n-----------------------------\n");
+
+        printCube(n-1);
+    }
 
 
+    public static void main(String[] args) {
 
+    printCube(3);
 
     }
 }

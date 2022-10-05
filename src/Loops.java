@@ -28,7 +28,7 @@ public class Loops {
             for (int j = 1; j <= i; j++) {
                 factorial *= j;
             }
-            System.out.println("Factorial of " + i + " is: " + factorial);
+            System.out.println("Fibonacci of " + i + " is: " + factorial);
         }
         System.out.println("Sum of 1-100 numbers is: " + sum);
 
