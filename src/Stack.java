@@ -51,6 +51,14 @@ public class Stack {
             return stck1[++temp];
         }
     }
+
+    boolean isContain(int x){
+        for (int i = 0; i < stck.length; i++) {
+            if (x == stck[i]) return true;
+        }
+        return false;
+    }
+
 }
 
 class TestStack {
@@ -64,7 +72,7 @@ class TestStack {
 //        MyStack.push(2);
         MyStack.pop();
         MyStack.push(3);
-
+        System.out.println(MyStack.isContain(4));
 
 
         for (int i = 0; i < MyStack.stck.length; i++) {
