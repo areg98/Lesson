@@ -65,14 +65,14 @@ class TestStack {
     public static void main(String[] args) {
         Stack MyStack = new Stack();
 
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 1; i <= 25; i++) {
             MyStack.push(i);
         }
         MyStack.shift();
 //        MyStack.push(2);
-        MyStack.pop();
-        MyStack.push(3);
-        System.out.println(MyStack.isContain(4));
+//        MyStack.pop();
+//        MyStack.push(3);
+        System.out.println(MyStack.isContain(7));
 
 
         for (int i = 0; i < MyStack.stck.length; i++) {

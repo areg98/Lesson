@@ -43,18 +43,27 @@ public class Homework {
             arr[i] = random.nextInt(0,10);
             if (i % 100 == 0) System.out.println();
             System.out.print("\u001B[32m" + arr[i] + " " + "\u001B[0m");
-        }
-        for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < 10; j++) {
                 if (arr[i] == j) counts[j]++;
             }
         }
+
         System.out.println();
         for (int i = 0; i < counts.length; i++) {
             float tokos = (float) (counts[i] * 100) / n;
             System.out.println(i + ": " + counts[i] + " " + tokos + "%");
         }
+        int max = counts[0], maxIndex = 0;
+        for (int i = 1; i < counts.length; i++) {
+            if (counts[i] > max) {
+                max = counts[i];
+                maxIndex = i;
+            }
+        }
+        System.out.println("\n" + "Max Number: " + maxIndex);
     }
+
+
 
     //Напишите метод, который получает в качестве параметра строку и возвращает
     //строку, составленную только из заглавных букв русского алфавита.
@@ -74,16 +83,16 @@ public class Homework {
 
 
         public static void main (String[]args){
-//            int[] arr1 = {5,28,62,8,6};
-//            sort(arr1);
-//            System.out.print("Sorted Array: ");
-//            for (int i = 0; i < arr1.length; i++) {
-//                System.out.print(arr1[i] + " ");
-//            }
-//            System.out.println();
-//            System.out.print("The second largest number: " + secondLargest(arr1) + "\n");
-//            System.out.print("The second smallest number: " + secondSmallest(arr1) + "\n");
-            randomNumbers(2450);
-//            System.out.println(getUpperCases("АБвrде 123ЖзИ"));
+            int[] arr1 = {5,28,62,8,6};
+            sort(arr1);
+            System.out.print("Sorted Array: ");
+            for (int i = 0; i < arr1.length; i++) {
+                System.out.print(arr1[i] + " ");
+            }
+            System.out.println();
+            System.out.print("The second largest number: " + secondLargest(arr1) + "\n");
+            System.out.print("The second smallest number: " + secondSmallest(arr1) + "\n");
+            randomNumbers(1000);
+            System.out.println(getUpperCases("АБвrде 123ЖзИ"));
         }
     }
