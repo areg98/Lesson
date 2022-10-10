@@ -92,7 +92,7 @@ public class Homework {
             System.out.println();
             System.out.print("The second largest number: " + secondLargest(arr1) + "\n");
             System.out.print("The second smallest number: " + secondSmallest(arr1) + "\n");
-            randomNumbers(1000);
+            randomNumbers(10000);
             System.out.println(getUpperCases("АБвrде 123ЖзИ"));
         }
     }
