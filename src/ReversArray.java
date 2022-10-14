@@ -4,6 +4,7 @@ public class ReversArray {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = i + 1;
         }
+
         for (int x : arr) {
             System.out.print(x + " ");
         }
